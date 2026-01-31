@@ -57,11 +57,7 @@ Spring Boot is configured to use this keystore to serve HTTPS traffic on port **
 <img width="1152" height="654" alt="image" src="https://github.com/user-attachments/assets/43d343ee-c594-4693-a0fd-9aafa227cf32" />
 
 **Screenshot 3.1.3**  
-- `application.yml` (or `application.properties`) showing SSL configuration:
-  - `server.port=8443`
-  - `server.ssl.key-store`
-  - `server.ssl.key-store-type`
-  - `server.ssl.key-alias`
+- `application.properties`:
 
 <img width="2074" height="930" alt="image" src="https://github.com/user-attachments/assets/1daee75d-429b-4d04-bd8a-cb0c44a840ec" />
 
@@ -102,7 +98,7 @@ keytool -exportcert \
 
 This produced a PEM-format certificate file: local-https.crt.
 
-Step 2: Verify HTTPS using curl (with certificate)
+### Step 2: Verify HTTPS using curl (with certificate)
 
 The HTTPS API was successfully verified using:
 
@@ -151,22 +147,28 @@ This approach is secure and correctly demonstrates how HTTPS works with self-sig
 ### Evidence (Screenshots Required)
 
 **Screenshot 3.3.1**
-Terminal output showing keytool -exportcert success
+
+- Terminal output showing keytool -exportcert success
+
 <img width="1140" height="442" alt="image" src="https://github.com/user-attachments/assets/bfe9ae8b-51a0-42b8-a7e2-48d260261686" />
 
 **Screenshot 3.3.2**
 
-Terminal output showing successful curl --cacert HTTPS call
+- Terminal output showing successful curl --cacert HTTPS call
 
 <img width="1140" height="324" alt="image" src="https://github.com/user-attachments/assets/cc23641a-726b-46db-a2f2-f4303bf65a16" />
 
 
 **Screenshot 3.3.3**
-Postman Certificates settings page showing local-https.crt added under CA Certificates
+
+- Postman Certificates settings page showing local-https.crt added under CA Certificates
+
 <img width="1410" height="994" alt="image" src="https://github.com/user-attachments/assets/9bb035c1-7cc6-422c-b98a-8f81c87388c7" />
 
 **Screenshot 3.3.4**
-Postman request to https://localhost:8443/api/ping returning 204 No Content
+
+- Postman request to https://localhost:8443/api/ping returning 204 No Content
+
 <img width="2516" height="1514" alt="image" src="https://github.com/user-attachments/assets/1471d508-8d57-4b7c-b661-6e9a1c62862f" />
 
 
