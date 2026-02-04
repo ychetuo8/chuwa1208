@@ -186,3 +186,31 @@
 - **`@Autowired`**  
   Performs automatic dependency injection by type.  
   Works with the Spring IoC container to manage object creation and wiring.
+  
+---
+
+- **@Aspect**
+Marks a class as an Aspect that contains cross-cutting logic such as logging or monitoring.
+
+- **@Before**
+Executes before the target method is invoked.
+Commonly used for logging input parameters or performing pre-checks.
+
+- **@After**
+Executes after the target method finishes, regardless of success or exception.
+
+- **@AfterReturning**
+Executes only when the target method completes successfully.
+Allows access to the returned value
+
+- **@AfterThrowing**
+Executes only when the target method throws an exception.
+Allows access to the thrown exception.
+
+- **@Around**
+Executes around the target method invocation.
+Provides full control over method execution, including timing, exception handling, and whether the method proceeds.
+
+- **@Pointcut**
+Defines which methods should be intercepted by AOP using an expression.
+It allows reusing the same interception rule across multiple advices.
